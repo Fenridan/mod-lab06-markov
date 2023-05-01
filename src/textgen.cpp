@@ -2,9 +2,7 @@
 #include "textgen.h"
 #include <time.h>
 
-using namespace std;
-
-Gen::Gen(string array, int val1, int val2) {
+Gen::Gen(std::string array, int val1, int val2) {
     srand(time(NULL));
     NPREF = val1;
     MAXGEN = val2;
@@ -36,10 +34,10 @@ Gen::Gen(string array, int val1, int val2) {
         else statetab[prf].push_back("END_OF_FILE");
     }
 }
-string Gen::getText() {
+std::string Gen::getText() {
     prefix str;
     for (int i = 0; i < NPREF; i++) str.push_back(words[i]);
-    string answer = "";
+    std::string answer = "";
     int count = 1;
     while (answer.size() < MAXGEN) {
         if (answer.size() == 0) {
@@ -59,14 +57,14 @@ string Gen::getText() {
             count++;
             answer = answer + '\n';
         }
-        string tmp = statetab[str][val];
+        std::string tmp = statetab[str][val];
         for (int i = 0; i < NPREF - 1; i++) str[i] = str[i + 1];
         str[NPREF - 1] = tmp;
     }
     return answer;
 }
-Gen::Gen(map<prefix, vector<string> > value, 
-    vector<string> word, int val1, int val2) {
+Gen::Gen(std::map<prefix, std::vector<std::string> > value,
+    std::vector<std::string> word, int val1, int val2) {
     NPREF = val1;
     MAXGEN = val2;
     statetab = value;
