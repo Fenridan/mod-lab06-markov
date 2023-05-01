@@ -49,9 +49,9 @@ std::string Gen::getText() {
         if (statetab[str].size() == 1 && statetab[str][0] == "END_OF_FILE")
             break;
         if (statetab[str].size() == 0) break;
-        val = rand_r(100000) % statetab[str].size();
+        val = rand() % statetab[str].size();
         if (statetab[str][statetab[str].size() - 1] == "END_OF_FILE")
-            val = rand_r(100000) % (statetab[str].size() - 1);
+            val = rand() % (statetab[str].size() - 1);
         answer = answer + statetab[str][val] + ' ';
         if (count * 100 - answer.size() < 0 ||
             count * 100 - answer.size() > 100) {
