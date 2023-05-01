@@ -7,7 +7,7 @@ int main()
 {
     string line;
     string text = "";
-    ifstream in("tst.txt");
+    ifstream in("test.txt");
     if (in.is_open())
     {
         while (getline(in, line))
