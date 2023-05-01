@@ -1,3 +1,4 @@
+// Copyright 2023 Fenridan
 #include <string>
 #include <deque>
 #include <vector>
