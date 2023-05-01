@@ -3,7 +3,8 @@
 #include "textgen.h"
 
 TEST(prefix_count, first) {
-    string t = "first second third fourth fifth sixth seventh eighth ninth tenth";
+    string t = "first second third fourth";
+    t += " fifth sixth seventh eighth ninth tenth";
     int nPref = 2;
     int maxGen = 10;
     Gen m = Gen(t, nPref, maxGen);
