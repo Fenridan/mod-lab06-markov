@@ -1,3 +1,4 @@
+// Copyright 2023 Fenridan
 #include <iostream>
 #include <fstream>
 #include"textgen.h"
