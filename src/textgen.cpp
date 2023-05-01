@@ -30,7 +30,9 @@ Gen::Gen(std::string array, int val1, int val2) {
             prf.push_back(words[i + j]);
         if (i + NPREF < words.size()) {
             statetab[prf].push_back(words[i + NPREF]);
-        } else statetab[prf].push_back("END_OF_FILE");
+        } else {
+            statetab[prf].push_back("END_OF_FILE");
+        }
     }
 }
 std::string Gen::getText() {
