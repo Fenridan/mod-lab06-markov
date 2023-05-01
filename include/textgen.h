@@ -4,8 +4,7 @@
 #include <vector>
 #include <map>
 using namespace std;
-class Gen
-{
+class Gen{
 private:
     string data;
     vector<string> words;
