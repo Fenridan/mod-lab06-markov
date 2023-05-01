@@ -1,6 +1,7 @@
 // Copyright 2023 Fenridan
 #include "textgen.h"
 #include <time.h>
+#include <random>
 
 Gen::Gen(std::string array, int val1, int val2) {
     srand(time(NULL));
@@ -49,9 +50,11 @@ std::string Gen::getText() {
         if (statetab[str].size() == 1 && statetab[str][0] == "END_OF_FILE")
             break;
         if (statetab[str].size() == 0) break;
-        val = rand() % statetab[str].size();
+        std::random_device rd;
+        std::mt19937 gen(rd());
+        val = gen() % statetab[str].size();
         if (statetab[str][statetab[str].size() - 1] == "END_OF_FILE")
-            val = rand() % (statetab[str].size() - 1);
+            val = gen() % (statetab[str].size() - 1);
         answer = answer + statetab[str][val] + ' ';
         if (count * 100 - answer.size() < 0 ||
             count * 100 - answer.size() > 100) {
