@@ -1,4 +1,5 @@
-﻿#include "textgen.h"
+// Copyright 2023 Fenridan
+#include "textgen.h"
 #include <time.h>
 
 using namespace std;
