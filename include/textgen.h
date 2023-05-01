@@ -3,17 +3,16 @@
 #include <deque>
 #include <vector>
 #include <map>
-using namespace std;
 class Gen {
 private:
-    string data;
-    vector<string> words;
-    typedef deque<string> prefix;
-    map<prefix, vector<string> > statetab;
+    std::string data;
+    std::vector<std::string> words;
+    typedef std::deque<std::string> prefix;
     int NPREF;
     int MAXGEN;
 public:
-    Gen(string arr, int val1, int val2);
-    string getText();
-    Gen(map<prefix, vector<string> > val, vector<string> words, int val1, int val2);
+    std::map<prefix, std::vector<std::string> > statetab;
+    Gen(std::string arr, int val1, int val2);
+    std::string getText();
+    Gen(std::map<prefix, std::vector<std::string> > val, std::vector<std::string> words, int val1, int val2);
 };
