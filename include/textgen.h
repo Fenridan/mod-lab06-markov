@@ -1,6 +1,6 @@
 // Copyright 2023 Fenridan
-#ifndef INCLUDE_TEXTGEN_H
-#define INCLUDE_TEXTGEN_H
+#ifndef INCLUDE_TEXTGEN_H_
+#define INCLUDE_TEXTGEN_H_
 #include <string>
 #include <deque>
 #include <vector>
@@ -18,4 +18,4 @@ public:
     std::string getText();
     Gen(std::map<prefix, std::vector<std::string> > val, std::vector<std::string> words, int val1, int val2);
 };
-#endif INCLUDE_TEXTGEN_H
+#endif INCLUDE_TEXTGEN_H_
